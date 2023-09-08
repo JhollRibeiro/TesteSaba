@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script src="https://assets.adobedtm.com/e72b4113c11a/899cc94cf838/launch-fd1b9988e7c8-development.min.js"
+		async></script>
+	<!--<script src="https://assets.adobedtm.com/dedcc86548e8/6f5f4aa34959/launch-f30674b659c5-development.min.js" async></script>-->
+	<!---script marketo-->
+	<script type="text/javascript">
+		(function () {
+			var didInit = false;
+			function initMunchkin() {
+				if (didInit === false) {
+					didInit = true;
+					Munchkin.init('271-ZJD-911');
+				}
+			}
+			var s = document.createElement('script');
+			s.type = 'text/javascript';
+			s.async = true;
+			s.src = '//munchkin.marketo.net/munchkin.js';
+			s.onreadystatechange = function () {
+				if (this.readyState == 'complete' || this.readyState == 'loaded') {
+					initMunchkin();
+				}
+			};
+			s.onload = initMunchkin;
+			document.getElementsByTagName('head')[0].appendChild(s);
+		})();
+	</script>
+
+	<script src="//271-ZJD-911.mktoweb.com/js/forms2/js/forms2.min.js"></script>
+	<!-- inicio código de/para GFT Marketo-->
+	<script type="text/javascript">
+		(function () {
+			var didInit = false;
+			function initMunchkin() {
+				if (didInit === false) {
+					didInit = true;
+					Munchkin.init('271-ZJD-911');
+				}
+			}
+			var s = document.createElement('script');
+			s.type = 'text/javascript';
+			s.async = true;
+			s.src = '//munchkin.marketo.net/munchkin.js';
+			s.onreadystatechange = function () {
+				if (this.readyState == 'complete' || this.readyState == 'loaded') {
+					initMunchkin();
+				}
+			};
+			s.onload = initMunchkin;
+			document.getElementsByTagName('head')[0].appendChild(s);
+		})();
+	</script>
+	<script src="//271-ZJD-911.mktoweb.com/js/forms2/js/forms2.min.js"></script>
+
+	<script type="text/javascript">
+
+		document.addEventListener('DOMContentLoaded', function (_e) {
+
+			// Get and declare all the fields for the first step (name, firstname and lastname)     
+			var ciudad;
+			var cargo;
+			var emailFieldValue;
+			var btnEnviar;
+
+			btnEnviar = document.getElementById('continuarOnboarding');
+
+			btnEnviar.onclick = function (event) {
+
+				event.preventDefault();
+
+				ciudad = document.getElementById("ciudad").value;
+				cargo = document.getElementById("cargo").value;
+				emailFieldValue = document.getElementById("email").value;
+
+				MktoForms2.loadForm("//271-ZJD-911.mktoweb.com", "271-ZJD-911", 1034, function (formWeb) {
+					formWeb.onSuccess(function (vals, thanksURL) {
+						return false;
+					});
+
+					formWeb.addHiddenFields(
+						{
+							"City": ciudad,
+							"Title": cargo,
+							"Email": emailFieldValue
+						});
+					formWeb.submit();
+				});
+			};
+		});		                                   
+	</script>
+
+	<!-- fim código de/para GFT Marketo-->
+	<script>
+		MktoForms2.loadForm("//271-ZJD-911.mktoweb.com", "271-ZJD-911", 1034);
+	</script>
+	<!---fim script marketo-->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	<!-- font (google) -->
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<title>Test Saba</title>
+
+</html>
+
+<script>
+	window.adobeDataLayer = window.adobeDataLayer || [];
+
+	window.adobeDataLayer.push({
+		"event": "pageLoad",
+		"pageInstanceID": "Home-Desarollo",
+		"page": {
+			"pageInfo": {
+				"pageName": document.title,
+				"URL": "https://mariliagp.github.io/mylocal/",
+				"referringURL": "",
+				"deviceCategory": "mobile / desktop",
+				"language": "es-MX",
+				"codeRegion": "MX",
+				"entorno": "Desarollo"
+			}
+		},
+		"producto": {
+			"tipo": "Personas",
+			"categoria": "Producto Digital",
+			"seccion": "Home",
+			"appStep": "App Step 1 (test page)",
+			"appName": "cuenta_ahorro_pre_registro",
+			"producto": "cuenta_ahorro",
+			"detalle": "home (test page)",
+			"pasoOperativa": "1",
+			"infoOperativa": "1 - Inicio Pre-registro"
+		},
+		"marketing": {
+			"utmSource": "exemple utm source",
+			"utmMedium": "exemple utm medium",
+			"utmCampaign": "exemple utm campaign",
+			"utmContent": "exemple utm content",
+			"utmTerm": "exemple utm term"
+		},
+		"user": {
+			"userID": "userID",
+			"userStatus": "no logueado"
+		},
+		"error": {
+			"errorCode": "0x45465",
+			"errorType": "exception",
+			"errorPage": "App Step 1",
+			"errorDescription": "Internal Server Error"
+		}
+
+	});
+
+</script>
+</head>
+
+<body>
+	<header>
+		<!-- nada aqui -->
+	</header>
+	<section class="banner">
+		<h1>Step 1</h1>
+		<p>Pré Registro</p>
+		<!-------inicio formulario------>
+		<p>
+		<form id="formOnbording">
+			<label for="ciudad">Ciudad:</label><br>
+			<input type="text" id="ciudad" name="ciudad"><br>
+			<label for="cargo">Cargo:</label><br>
+			<label for="email">Dirección de email:</label><br>
+			<input type="text" id="email" name="email"><br>
+			<input type="text" id="secondSurname" name="secondSurname">
+		</form>
+		</p>
+		<!------fim formulário------->
+		<a class="button_a" id="continuarOnboarding" href="#step" onclick="window.adobeDataLayer.push({
+				event:  'click',
+				descriptionClick: 'clic en empezar',
+				producto: {
+					tipo: 'Personas',
+						categoria: 'Producto Digital',
+						seccion: 'Pre Registro',
+						appStep: 'App Step 1.1 (test page)',
+						appName: 'cuenta_ahorro_pre_registro',
+						producto: 'cuenta_ahorro',
+						detalle: 'App Step 1.1 - Clic en Empezar (test page)',
+						pasoOperativa: '1.1',
+						infoOperativa: '1.1 - Clic en Empezar'
+						}
+			});">Empezar →</a>
+	</section><!-- .banner -->
+
+</body>
+
+</html>
