@@ -79,6 +79,7 @@ form input {
   border: none; 
   border-radius: 6px;
   padding: 8px 4px;
+  width: 300px;
 }
 
 .button_a {
