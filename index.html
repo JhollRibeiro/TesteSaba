@@ -4,8 +4,7 @@
 <head>
 	<script src="https://assets.adobedtm.com/e72b4113c11a/899cc94cf838/launch-fd1b9988e7c8-development.min.js"
 		async></script>
-	<!--<script src="https://assets.adobedtm.com/dedcc86548e8/6f5f4aa34959/launch-f30674b659c5-development.min.js" async></script>-->
-	<!---script marketo-->
+
 	<script type="text/javascript">
 		(function () {
 			var didInit = false;
@@ -106,57 +105,57 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	<title>Test Saba</title>
 
-</html>
+	<script>
+		window.adobeDataLayer = window.adobeDataLayer || [];
 
-<script>
-	window.adobeDataLayer = window.adobeDataLayer || [];
-
-	window.adobeDataLayer.push({
-		"event": "pageLoad",
-		"pageInstanceID": "Home-Desarollo",
-		"page": {
-			"pageInfo": {
-				"pageName": document.title,
-				"URL": "https://mariliagp.github.io/mylocal/",
-				"referringURL": "",
-				"deviceCategory": "mobile / desktop",
-				"language": "es-MX",
-				"codeRegion": "MX",
-				"entorno": "Desarollo"
+		window.adobeDataLayer.push({
+			"event": "pageLoad",
+			"pageInstanceID": "Home-Desarollo",
+			"page": {
+				"pageInfo": {
+					"pageName": document.title,
+					"URL": "https://mariliagp.github.io/mylocal/",
+					"referringURL": "",
+					"deviceCategory": "mobile / desktop",
+					"language": "es-MX",
+					"codeRegion": "MX",
+					"entorno": "Desarollo"
+				}
+			},
+			"producto": {
+				"tipo": "Personas",
+				"categoria": "Producto Digital",
+				"seccion": "Home",
+				"appStep": "App Step 1 (test page)",
+				"appName": "cuenta_ahorro_pre_registro",
+				"producto": "cuenta_ahorro",
+				"detalle": "home (test page)",
+				"pasoOperativa": "1",
+				"infoOperativa": "1 - Inicio Pre-registro"
+			},
+			"marketing": {
+				"utmSource": "exemple utm source",
+				"utmMedium": "exemple utm medium",
+				"utmCampaign": "exemple utm campaign",
+				"utmContent": "exemple utm content",
+				"utmTerm": "exemple utm term"
+			},
+			"user": {
+				"userID": "userID",
+				"userStatus": "no logueado"
+			},
+			"error": {
+				"errorCode": "0x45465",
+				"errorType": "exception",
+				"errorPage": "App Step 1",
+				"errorDescription": "Internal Server Error"
 			}
-		},
-		"producto": {
-			"tipo": "Personas",
-			"categoria": "Producto Digital",
-			"seccion": "Home",
-			"appStep": "App Step 1 (test page)",
-			"appName": "cuenta_ahorro_pre_registro",
-			"producto": "cuenta_ahorro",
-			"detalle": "home (test page)",
-			"pasoOperativa": "1",
-			"infoOperativa": "1 - Inicio Pre-registro"
-		},
-		"marketing": {
-			"utmSource": "exemple utm source",
-			"utmMedium": "exemple utm medium",
-			"utmCampaign": "exemple utm campaign",
-			"utmContent": "exemple utm content",
-			"utmTerm": "exemple utm term"
-		},
-		"user": {
-			"userID": "userID",
-			"userStatus": "no logueado"
-		},
-		"error": {
-			"errorCode": "0x45465",
-			"errorType": "exception",
-			"errorPage": "App Step 1",
-			"errorDescription": "Internal Server Error"
-		}
 
-	});
+		});
 
-</script>
+	</script>
+
+	<script src="js-file.js"></script>
 </head>
 
 <body>
@@ -165,7 +164,7 @@
 	</header>
 	<section class="banner">
 		<h1>Onboarding</h1>
-		<h3>Actualizar  Datos</h3>
+		<h3>Actualizar Datos</h3>
 		<!-------inicio formulario------>
 		<p>
 		<div id="divForm">
