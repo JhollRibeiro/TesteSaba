@@ -1,5 +1,5 @@
 let btnEmpezar;
-btnEmpezar = document.getElementById('continuarOnboarding');
+//btnEmpezar = document.getElementById('continuarOnboarding');
 
 Notification.requestPermission().then(permission => {
   return;
