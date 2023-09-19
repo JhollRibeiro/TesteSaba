@@ -52,7 +52,7 @@
 			document.getElementsByTagName('head')[0].appendChild(s);
 		})();
 	</script>
-	<script src="//271-ZJD-911.mktoweb.com/js/forms2/js/forms2.min.js"></script>
+	<!-- <script src="//271-ZJD-911.mktoweb.com/js/forms2/js/forms2.min.js"></script> -->
 
 	<script type="text/javascript">
 
@@ -64,30 +64,30 @@
 			var emailFieldValue;
 			var btnEnviar;
 
-			// btnEnviar = document.getElementById('continuarOnboarding');
+			btnEnviar = document.getElementById('continuarOnboarding');
 
-			// btnEnviar.onclick = function (event) {
+			btnEnviar.onclick = function (event) {
 
-			// 	event.preventDefault();
+				event.preventDefault();
 
-			// 	ciudad = document.getElementById("ciudad").value;
-			// 	cargo = document.getElementById("cargo").value;
-			// 	emailFieldValue = document.getElementById("email").value;
+				ciudad = document.getElementById("ciudad").value;
+				cargo = document.getElementById("cargo").value;
+				emailFieldValue = document.getElementById("email").value;
 
-			// 	MktoForms2.loadForm("//271-ZJD-911.mktoweb.com", "271-ZJD-911", 1034, function (formWeb) {
-			// 		formWeb.onSuccess(function (vals, thanksURL) {
-			// 			return false;
-			// 		});
+				MktoForms2.loadForm("//271-ZJD-911.mktoweb.com", "271-ZJD-911", 1034, function (formWeb) {
+					formWeb.onSuccess(function (vals, thanksURL) {
+						return false;
+					});
 
-			// 		formWeb.addHiddenFields(
-			// 			{
-			// 				"City": ciudad,
-			// 				"Title": cargo,
-			// 				"Email": emailFieldValue
-			// 			});
-			// 		formWeb.submit();
-			// 	});
-			// };
+					formWeb.addHiddenFields(
+						{
+							"City": ciudad,
+							"Title": cargo,
+							"Email": emailFieldValue
+						});
+					formWeb.submit();
+				});
+			};
 		});		                                   
 	</script>
 
