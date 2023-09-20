@@ -2,16 +2,18 @@
 <html lang="en">
 
 <head>
-	<script src="https://assets.adobedtm.com/e72b4113c11a/899cc94cf838/launch-fd1b9988e7c8-development.min.js" async></script>
-	<!-- inicio código de/para GFT Marketo-->	
-	<script src="//271-ZJD-911.mktoweb.com/js/forms2/js/forms2.min.js"></script>
+	<script src="https://assets.adobedtm.com/e72b4113c11a/899cc94cf838/launch-fd1b9988e7c8-development.min.js"
+		async></script>
+
+	<!-- START - Munchkin Lead Tracking -->
+	<!-- tracking end-user page visits and clicks -->
 	<script type="text/javascript">
 		(function () {
 			var didInit = false;
 			function initMunchkin() {
 				if (didInit === false) {
 					didInit = true;
-					Munchkin.init('271-ZJD-911');
+					Munchkin.init('CHANGE-ME');
 				}
 			}
 			var s = document.createElement('script');
@@ -27,11 +29,18 @@
 			document.getElementsByTagName('head')[0].appendChild(s);
 		})();
 	</script>
+	<!-- END - Munchkin Lead Tracking -->
+
+	<!-- inicio código para formulários do Marketo -->
+	<script src="//271-ZJD-911.mktoweb.com/js/forms2/js/forms2.min.js"></script>
+
+	<script>
+		MktoForms2.loadForm("//271-ZJD-911.mktoweb.com", "271-ZJD-911", 1034);
+	</script>
+
 	<script type="text/javascript">
 
 		document.addEventListener('DOMContentLoaded', function (_e) {
-
-			// Get and declare all the fields for the first step (name, firstname and lastname)     
 			var ciudad;
 			var cargo;
 			var emailFieldValue;
@@ -63,12 +72,8 @@
 			};
 		});		                                   
 	</script>
+	<!-- fim código para formulários do Marketo-->
 
-	<!-- fim código de/para GFT Marketo-->
-	<script>
-		MktoForms2.loadForm("//271-ZJD-911.mktoweb.com", "271-ZJD-911", 1034);
-	</script>
-	<!---fim script marketo-->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,6 +83,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	<title>Test Saba</title>
 
+	<!-- Data Layer -->
+	<!--
 	<script>
 		window.adobeDataLayer = window.adobeDataLayer || [];
 
@@ -127,6 +134,7 @@
 		});
 
 	</script>
+-->
 
 </head>
 
@@ -134,9 +142,11 @@
 	<header>
 		<!-- nada aqui -->
 	</header>
+
 	<section class="banner">
 		<h1>Onboarding</h1>
 		<h3>Actualizar Datos</h3>
+
 		<!-------inicio formulario------>
 		<p>
 		<div id="divForm">
@@ -151,7 +161,13 @@
 		</div>
 		</p>
 		<!------fim formulário------->
-		<a class="button_a" id="continuarOnboarding" href="#step" onclick="window.adobeDataLayer.push({
+
+		<a class="button_a" id="continuarOnboarding">Empezar →</a>
+
+		<!-- Push to DataLayer -->
+		<!-- 
+		<a class="button_a" id="continuarOnboarding" href="#step" 
+		onclick="window.adobeDataLayer.push({
 				event:  'click',
 				descriptionClick: 'clic en empezar',
 				producto: {
@@ -166,7 +182,8 @@
 						infoOperativa: '1.1 - Clic en Empezar'
 						}
 			});">Empezar →</a>
-	</section><!-- .banner -->
+		-->
+	</section>
 
 	<script src="js-file.js"></script>
 </body>
