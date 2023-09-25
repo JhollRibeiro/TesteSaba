@@ -55,7 +55,6 @@
 				ciudad = document.getElementById("ciudad").value;
 				cargo = document.getElementById("cargo").value;
 				emailFieldValue = document.getElementById("email").value;				
-				MiddleName = "No Form";
 
 				MktoForms2.loadForm("//271-ZJD-911.mktoweb.com", "271-ZJD-911", 1034, function (formWeb) {
 					formWeb.onSuccess(function (vals, thanksURL) {
@@ -66,7 +65,8 @@
 						{
 							"City": ciudad,
 							"Title": cargo,
-							"Email": emailFieldValue
+							"Email": emailFieldValue,
+							"MiddleName" = "No Form";
 						});
 					formWeb.submit();
 				});
