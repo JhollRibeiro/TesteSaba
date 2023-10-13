@@ -52,6 +52,7 @@
 				cargo = document.getElementById("cargo").value;
 				emailFieldValue = document.getElementById("email").value;				
 
+				/*
 				MktoForms2.loadForm("//271-ZJD-911.mktoweb.com", "271-ZJD-911", 1034, function (formWeb) {
 					formWeb.onSuccess(function (vals, thanksURL) {
 						return false;
@@ -64,6 +65,18 @@
 							"Email": emailFieldValue,
 							"MiddleName": "Segundo Nombre",
 							"contrasenaexitosadev": true
+						});
+					formWeb.submit();
+				}); */
+
+				MktoForms2.loadForm("//305-CPI-479.mktoweb.com", "305-CPI-479", 2, function (formWeb) {
+					formWeb.onSuccess(function (vals, thanksURL) {
+						return false;
+					});
+
+					formWeb.addHiddenFields(
+						{
+							"contrasenaExitosa": true
 						});
 					formWeb.submit();
 				});
