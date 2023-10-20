@@ -50,7 +50,7 @@
 
 				ciudad = document.getElementById("ciudad").value;
 				cargo = document.getElementById("cargo").value;
-				emailFieldValue = document.getElementById("email").value;				
+				emailFieldValue = document.getElementById("email").value;
 
 				MktoForms2.loadForm("//271-ZJD-911.mktoweb.com", "271-ZJD-911", 1034, function (formWeb) {
 					formWeb.onSuccess(function (vals, thanksURL) {
@@ -59,6 +59,10 @@
 
 					formWeb.addHiddenFields(
 						{
+							"FirstName": 'Criatiane',
+							"PrimerApellido": 'Maria',
+							"SegundoApellido": 'Pereira',
+							"MobilePhone": cargo,
 							"appStep": "crearContrasena",
 							"appStepLastUpdated": "2023-10-20T13:00:00Z",
 							"Email": emailFieldValue
@@ -80,7 +84,7 @@
 						});
 					formWeb.submit();
 				});
-       				*/
+								*/
 			};
 		});		                                   
 	</script>
