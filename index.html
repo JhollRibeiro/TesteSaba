@@ -52,23 +52,18 @@
 				cargo = document.getElementById("cargo").value;
 				emailFieldValue = document.getElementById("email").value;
 
-				MktoForms2.loadForm("//271-ZJD-911.mktoweb.com", "271-ZJD-911", 1034, function (formWeb) {
-					formWeb.onSuccess(function (vals, thanksURL) {
-						return false;
-					});
+				MktoForms2.loadForm("//271-ZJD-911.mktoweb.com", "271-ZJD-911", 1034, function (formWeb) { // SANDBOX
+          formWeb.onSuccess(function (vals, thanksURL) {
+            return false;
+          });
+          formWeb.addHiddenFields(
+            {
+              "Email": "joao@email.com",
+              "fechaNacimiento": "1995-01-25"
+            });
+          formWeb.submit();
+        });
 
-					formWeb.addHiddenFields(
-						{
-							"FirstName": 'Criatiane',
-							"PrimerApellido": 'Maria',
-							"SegundoApellido": 'Pereira',
-							"MobilePhone": cargo,
-							"appStep": "crearContrasena",
-							"appStepLastUpdated": "2023-10-20T13:00:00Z",
-							"Email": emailFieldValue
-						});
-					formWeb.submit();
-				});
 
 				/*
 				MktoForms2.loadForm("//305-CPI-479.mktoweb.com", "305-CPI-479", 2, function (formWeb) {
