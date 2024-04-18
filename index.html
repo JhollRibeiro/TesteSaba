@@ -56,6 +56,7 @@
 
 				MktoForms2.loadForm("//271-ZJD-911.mktoweb.com", "271-ZJD-911", 1034, function (formWeb) { // SANDBOX
 					formWeb.onSuccess(function (vals, thanksURL) {
+						loader.classList.remove("loader");
 						return false;
 					});
 					formWeb.addHiddenFields(
@@ -83,7 +84,6 @@
 					formWeb.submit();
 				});
 								*/
-				loader.classList.remove("loader");
 			};
 		});		                                   
 	</script>
