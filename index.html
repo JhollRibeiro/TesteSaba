@@ -47,7 +47,7 @@
 			loader = document.getElementById('loader');
 
 			btnEnviar.onclick = function (event) {
-
+				loader.classList.remove("loader");
 				event.preventDefault();
 
 				ciudad = document.getElementById("ciudad").value;
@@ -84,6 +84,7 @@
 				});
 								*/
 			};
+			loader.classList.add("loader");
 		});		                                   
 	</script>
 	<!-- fim código para formulários do Marketo-->
@@ -164,7 +165,7 @@
 		<!-------inicio formulario------>
 		<p>
 		<div id="divForm">
-			<div id="loader" class="loader"></div>
+			<div id="loader" class="loader hide"></div>
 			<form id="formOnbording">
 				<label for="ciudad">Ciudad:</label><br>
 				<input type="text" id="ciudad" name="ciudad"><br>
