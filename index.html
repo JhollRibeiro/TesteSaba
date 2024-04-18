@@ -41,8 +41,10 @@
 			var cargo;
 			var emailFieldValue;
 			var btnEnviar;
+			var loader;
 
 			btnEnviar = document.getElementById('continuarOnboarding');
+			loader = document.getElementById('loader');
 
 			btnEnviar.onclick = function (event) {
 
@@ -162,6 +164,7 @@
 		<!-------inicio formulario------>
 		<p>
 		<div id="divForm">
+			<div id="loader" class="loader"></div>
 			<form id="formOnbording">
 				<label for="ciudad">Ciudad:</label><br>
 				<input type="text" id="ciudad" name="ciudad"><br>
